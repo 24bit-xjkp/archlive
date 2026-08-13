@@ -1,0 +1,150 @@
+amd-ucode
+arch-install-scripts
+archinstall
+base
+bluez
+bluez-utils
+# 保留bolt以支持雷电接口扩展坞
+bolt
+btrfs-progs
+cryptsetup
+ddrescue
+dmidecode
+dosfstools
+e2fsprogs
+efibootmgr
+ethtool
+exfatprogs
+fatresize
+foot-terminfo
+ghostty-terminfo
+gptfdisk
+hdparm
+hyperv
+intel-ucode
+iptables
+iw
+kitty-terminfo
+kmscon-terminfo
+libfido2
+linux
+linux-firmware
+lvm2
+man-db
+man-pages
+mdadm
+memtest86+-efi
+mkinitcpio
+mkinitcpio-archiso
+nano
+nmap
+ntfsprogs
+nvme-cli
+open-vm-tools
+openssh
+openvpn
+pacman-contrib
+partclone
+parted
+pv
+qemu-guest-agent
+reflector
+rsync
+rxvt-unicode-terminfo
+smartmontools
+sof-firmware
+sudo
+systemd-resolvconf
+tcpdump
+terminus-font
+testdisk
+tmux
+tpm2-tools
+tpm2-tss
+unrar
+usbutils
+vim
+virtualbox-guest-utils-nox
+wireless-regdb
+wpa_supplicant
+xdg-utils
+xfsprogs
+zsh
+
+# --- KDE Plasma desktop (Wayland) ---
+qt6-multimedia-ffmpeg
+plasma-desktop
+plasma-nm
+plasma-pa
+plasma-integration
+kde-gtk-config
+breeze-gtk
+konsole
+dolphin
+partitionmanager
+bluedevil
+kio-admin
+plasma-systemmonitor
+# spectacle, 避免引入OCR依赖包
+flameshot
+# okular, 依赖firefox内建的pdf查看器
+ark
+gwenview
+kate
+plasma-login-manager
+xdg-desktop-portal-kde
+udisks2
+kinfocenter
+kscreen
+power-profiles-daemon
+# --- GPU drivers (Intel/AMD/VirtIO/nouveau via Mesa) ---
+mesa
+vulkan-intel
+vulkan-radeon
+vulkan-nouveau
+vulkan-virtio
+spice-vdagent
+# --- Audio ---
+pipewire
+pipewire-pulse
+pipewire-alsa
+pipewire-jack
+wireplumber
+# --- Network ---
+networkmanager
+networkmanager-openvpn
+# --- Browser ---
+firefox
+firefox-i18n-zh-cn
+# --- Input method (fcitx5 + pinyin) ---
+fcitx5
+fcitx5-chinese-addons
+fcitx5-configtool
+fcitx5-gtk
+fcitx5-qt
+# --- Fonts ---
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ttf-maplemono-nf-cn
+# --- Python toolchain ---
+python
+# --- opencode ---
+opencode
+# --- Required at build time by customize_airootfs.sh ---
+git
+# --- utilities ---
+htop
+fastfetch
+nvtop
+# 对于需要编译安装的AUR包，需要在线安装base-devel等开发包
+yay
+arch-wiki-docs-zh-cn
+archlinuxcn-keyring
+zoxide
+zram-generator
+erofs-utils
+ripgrep
+bat
+# --- AUR 包（由本地仓库提供，构建前先运行 ./build.sh） ---
+clash-verge-rev-bin

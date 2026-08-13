@@ -1,0 +1,15 @@
+[Desktop Entry]
+DefaultProfile=配置方案 1.profile
+
+[FileLocation]
+scrollbackUseCacheLocation=true
+scrollbackUseSystemLocation=false
+
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+UseSingleInstance=true
+
+[UiSettings]
+ColorScheme=
