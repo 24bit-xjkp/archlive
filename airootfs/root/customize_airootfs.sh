@@ -30,15 +30,23 @@ EOF
 
 # oh-my-zsh with powerlevel10k theme and plugins for user 'arch'
 OH_MY_ZSH='/home/arch/.oh-my-zsh'
-git clone --depth=1 https://mirror.nju.edu.cn/git/ohmyzsh.git $OH_MY_ZSH
-git clone --depth=1 https://mirrors.nju.edu.cn/git/powerlevel10k.git $OH_MY_ZSH/custom/themes/powerlevel10k
-git clone --depth=1 https://mirrors.nju.edu.cn/git/zsh-autosuggestions.git $OH_MY_ZSH/custom/plugins/zsh-autosuggestions
-git clone --depth=1 https://mirrors.nju.edu.cn/git/zsh-syntax-highlighting.git $OH_MY_ZSH/custom/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://mirror.nju.edu.cn/git/ohmyzsh.git "$OH_MY_ZSH"
+git clone --depth=1 https://mirrors.nju.edu.cn/git/powerlevel10k.git "$OH_MY_ZSH/custom/themes/powerlevel10k"
+git clone --depth=1 https://mirrors.nju.edu.cn/git/zsh-autosuggestions.git "$OH_MY_ZSH/custom/plugins/zsh-autosuggestions"
+git clone --depth=1 https://mirrors.nju.edu.cn/git/zsh-syntax-highlighting.git "$OH_MY_ZSH/custom/plugins/zsh-syntax-highlighting"
 chown -R arch:arch /home/arch
 
 # Copy zsh configures for user 'root'
 cp -r $OH_MY_ZSH /root
 cp /etc/skel/.p10k_cli.zsh /etc/skel/.p10k.zsh /etc/skel/.zshrc /root
+
+# copy gitstatusd for p10k
+GITSTATUS='.cache/gitstatus'
+GITSTATUSD='gitstatusd-linux-x86_64'
+mkdir -p "/root/$GITSTATUS"
+cp "/etc/skel/$GITSTATUS/$GITSTATUSD" "/root/$GITSTATUS"
+chmod +x "/root/$GITSTATUS/$GITSTATUSD" "/home/arch/$GITSTATUS/$GITSTATUSD"
+
 
 # Services: use NetworkManager instead of systemd-networkd, autologin into KDE via plasma-login
 systemctl disable systemd-networkd.service systemd-networkd.socket systemd-networkd-wait-online.service
