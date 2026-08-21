@@ -32,6 +32,7 @@ linux-firmware
 lvm2
 man-db
 man-pages
+man-pages-zh_cn
 mdadm
 memtest86+-efi
 mkinitcpio
@@ -122,13 +123,18 @@ fcitx5-chinese-addons
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
+# 维基百科拼音词库，提升拼音输入准确率
+fcitx5-pinyin-zhwiki
 # --- Fonts ---
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 ttf-maplemono-nf-cn
+# PDF 中的 CJK 字符映射数据，确保 okular/evince 等正确渲染中文
+poppler-data
 # --- Python toolchain ---
 python
+python-docs-zh-cn
 # --- opencode ---
 opencode
 # --- Required at build time by customize_airootfs.sh ---
