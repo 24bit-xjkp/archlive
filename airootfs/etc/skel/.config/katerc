@@ -1,3 +1,15 @@
+[ColorPicker]
+HexLengths=3,6,9,12
+NamedColors=false
+PreviewAfterColor=true
+
+[ColoredBrackets]
+color1=#1275ef
+color2=#f83c1f
+color3=#9dba1e
+color4=#e219e2
+color5=#37d21c
+
 [General]
 Allow Tab Scrolling=true
 Auto Hide Tabs=false
@@ -18,6 +30,8 @@ Open New Tab To The Right Of Current=false
 Output History Limit=100
 Output With Date=false
 PinnedDocuments=
+Quickopen Filter Mode=0
+Quickopen List Mode=true
 Recent File List Entry Count=10
 Restore Window Configuration=true
 SDI Mode=false
@@ -40,6 +54,53 @@ Tab Double Click New Document=true
 Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
+[KTextEditor Document]
+Allow End of Line Detection=true
+Auto Detect Indent=true
+Auto Reload If Any External Changes Occurs=false
+Auto Reload If State Is In Version Control=true
+Auto Save=false
+Auto Save Interval=0
+Auto Save On Focus Out=false
+BOM=false
+Backup Local=false
+Backup Prefix=
+Backup Remote=false
+Backup Suffix=~
+Camel Cursor=false
+Encoding=UTF-8
+End of Line=0
+Indent On Backspace=true
+Indent On Tab=true
+Indent On Text Paste=true
+Indentation Mode=normal
+Indentation Width=4
+Keep Extra Spaces=false
+Line Length Limit=10000
+Newline at End of File=true
+On-The-Fly Spellcheck=false
+Overwrite Mode=false
+PageUp/PageDown Moves Cursor=false
+Remove Spaces=1
+ReplaceTabsDyn=true
+Show Spaces=0
+Show Tabs=true
+Smart Home=true
+Swap Directory=
+Swap File Mode=1
+Swap Sync Interval=15
+Tab Handling=2
+Tab Width=4
+Trailing Marker Size=1
+Use Editor Config=true
+Use First Line As Doc Name=true
+Word Wrap=false
+Word Wrap Column=140
+
+[KTextEditor Editor]
+Encoding Prober Type=1
+Fallback Encoding=ISO 10646-UCS-2
+
 [KTextEditor Renderer]
 Animate Bracket Matching=false
 Auto Color Theme Selection=false
@@ -47,7 +108,7 @@ Color Theme=VSCodium Dark
 Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
-Text Font=Maple Mono NF CN,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+Text Font=Maple Mono NF CN,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium,0,0
 Text Font Features=
 Word Wrap Marker=false
 
@@ -98,7 +159,7 @@ Show Documentation With Completion=true
 Show File Encoding=true
 Show Folding Icons On Hover Only=true
 Show Line Count=false
-Show Line Ending Type in Statusbar=false
+Show Line Ending Type in Statusbar=true
 Show Scrollbars=0
 Show Statusbar Dictionary=true
 Show Statusbar Highlighting Mode=true
@@ -125,7 +186,16 @@ RunPrefix=
 SetEditor=false
 
 [MainWindow]
-1951x1097 screen: Window-Maximized=true
+1707x960 screen: Window-Maximized=true
+
+[PluginSymbolViewer]
+ExpandTree=false
+SortSymbols=false
+TreeView=false
+ViewTypes=false
+
+[debugplugin]
+DAPConfiguration=
 
 [filetree]
 editShade=30,78,103
@@ -139,18 +209,18 @@ sortRole=0
 viewShade=77,46,91
 
 [lspclient]
-AllowedServerCommandLines=
+AllowedServerCommandLines=/home/luo/Toolchains/x86_64-pc-linux-gnu-clang24/bin/clangd --compile-commands-dir=.vscode --background-index -j=16 --completion-style=detailed --header-insertion=never --pch-storage=memory --all-scopes-completion --function-arg-placeholders=true --ranking-model=decision_forest --malloc-trim --header-insertion-decorators --limit-references=0 --limit-results=0 --rename-file-limit=0,/usr/bin/pylsp --check-parent-process,/usr/bin/verible-verilog-ls --rules=-parameter-name-style\\,line-length=140 --lsp_enable_hover --file_list_path .vscode/verible.filelist
 AutoHover=true
 AutoImport=true
 BlockedServerCommandLines=
 CompletionDocumentation=true
 CompletionParens=true
 Diagnostics=true
-FormatOnSave=false
+FormatOnSave=true
 HighlightGoto=true
 HighlightSymbol=true
 IncrementalSync=false
-InlayHints=false
+InlayHints=true
 Messages=true
 ReferencesDeclaration=true
 SemanticHighlighting=true
@@ -162,3 +232,16 @@ SymbolExpand=true
 SymbolSort=false
 SymbolTree=true
 TypeFormatting=false
+
+[project]
+autoCMake=true
+autorepository=git,subversion,mercurial
+directoryListing=true
+gitStatusDoubleClick=3
+gitStatusSingleClick=1
+index=false
+indexDirectory=
+multiProjectCompletion=false
+multiProjectGoto=false
+restoreProjectsForSessions=false
+showHiddenFiles=true

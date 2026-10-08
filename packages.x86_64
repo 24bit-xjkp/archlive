@@ -135,6 +135,7 @@ poppler-data
 # --- Python toolchain ---
 python
 python-docs-zh-cn
+python-lsp-server
 # --- opencode ---
 opencode
 # --- Required at build time by customize_airootfs.sh ---
