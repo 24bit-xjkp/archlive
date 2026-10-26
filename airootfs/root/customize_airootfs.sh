@@ -9,10 +9,10 @@ locale-gen
 # Set the default timezone
 ln -sfn /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-# # Rewrite the mirrorlist.
-# # pacman-mirrorlist overwrites /etc/pacman.d/mirrorlist during package
-# # installation, so this must happen after pacstrap. In a shell context
-# # $repo/$arch stay literal (unlike pacman hook Exec variables).
+# Rewrite the mirrorlist.
+# pacman-mirrorlist overwrites /etc/pacman.d/mirrorlist during package
+# installation, so this must happen after pacstrap. In a shell context
+# $repo/$arch stay literal (unlike pacman hook Exec variables).
 printf \
 'Server = https://mirrors.nju.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.zju.edu.cn/archlinux/$repo/os/$arch

@@ -153,5 +153,4 @@ zram-generator
 erofs-utils
 ripgrep
 bat
-# --- AUR 包（由本地仓库提供，构建前先运行 ./build.sh） ---
-clash-verge-rev-bin
+flclash
